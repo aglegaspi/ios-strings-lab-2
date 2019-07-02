@@ -129,6 +129,25 @@ Sample Input: `"PPALLP"`
 
 Sample Output: `true`
 
+```swift
+
+let input = "PPALLP"
+var absent = 0
+let late = "LLL"
+
+for i in input {
+    if i == "A" {
+        absent += 1
+    }
+}
+if input.contains(late) || absent > 1 {
+    print(false)
+} else {
+    true
+}
+
+```
+
 
 ## Question 6
 
@@ -139,9 +158,21 @@ Each letter from the magazine can only be used once. You can assume all letters 
 Examples:
 
 Sample Input1: `("a", "b")`
-
 Sample Output1: `False`
 
 Sample Input2: `("aa", "aab")`
-
 Sample Output2: `True`
+
+```swift
+
+let input = (ransom: "aa",magazine: "aab")
+
+let ransom = String(input.ransom.sorted())
+let magazine = (String(input.magazine.sorted()))
+
+let result = magazine.contains(ransom)
+
+```
+
+
+
