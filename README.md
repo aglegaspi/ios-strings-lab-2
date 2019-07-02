@@ -9,7 +9,8 @@ You are given a string stored in variable `problem`. Write code so that you prin
 ```swift
 var problem = "split this string into words and print them on separate lines"
 
-// Your code
+let newProblem = problem.replacingOccurrences(of: " ", with: "\n")
+print(newProblem)
 ```
 
 Example
@@ -38,8 +39,29 @@ lines
 Given a string `testString` create a new variable called `condensedString` that has any consecutive spaces in `testString` replaced with a single space.
 
 ```swift
+
 let testString = "  How   about      thesespaces  ?  "
 //condensedString = " How about thesespaces ? "
+
+let testString = "  How   about      thesespaces  ?  "
+var condensedString = ""
+var numberOfSpace = 0
+
+for i in testString {
+    if i == " "{
+        numberOfSpace = numberOfSpace + 1
+    } else {
+        numberOfSpace = 0
+    }
+    if numberOfSpace == 1 || numberOfSpace == 0 {
+        condensedString = condensedString + "\(i)"
+        
+    }
+}
+
+let result = condensedString.trimmingCharacters(in: .whitespaces)
+print(result)
+
 ```
 
 
@@ -48,10 +70,22 @@ let testString = "  How   about      thesespaces  ?  "
 Given a string with multiple words. Reverse the string word by word.
 
 Example:
-
 Sample Input: `"Swift is the best language"`
-
 Sample Output: `"language best the is Swift"`
+
+```swift
+
+let input = "Swift is the best language"
+let words = input.components(separatedBy: " ")
+var output = ""
+
+for word in words.reversed() {
+    output += "\(word) "
+}
+print(output)
+
+
+```
 
 
 ## Question 4
