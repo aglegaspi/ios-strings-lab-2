@@ -39,9 +39,11 @@ lines
 Given a string `testString` create a new variable called `condensedString` that has any consecutive spaces in `testString` replaced with a single space.
 
 ```swift
-
 let testString = "  How   about      thesespaces  ?  "
 //condensedString = " How about thesespaces ? "
+```
+
+```swift
 
 let testString = "  How   about      thesespaces  ?  "
 var condensedString = ""
@@ -59,8 +61,7 @@ for i in testString {
     }
 }
 
-let result = condensedString.trimmingCharacters(in: .whitespaces)
-print(result)
+print(condensedString)
 
 ```
 
@@ -83,7 +84,6 @@ for word in words.reversed() {
     output += "\(word) "
 }
 print(output)
-
 
 ```
 
@@ -116,9 +116,7 @@ print(output)
 You are given a string representing an **attendance record** for a student. The record only contains the following three characters:
 
 `'A' : Absent.`
-
 `'L' : Late.`
-
 `'P' : Present.`
 
 If a student has more than one 'A' or more than 2 continuous 'L's that student should not be rewarded. Print true if student is to be rewarded and False if they shouldn't.
