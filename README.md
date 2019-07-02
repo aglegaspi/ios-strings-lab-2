@@ -93,10 +93,22 @@ print(output)
 Given a string with multiple words. Write code that prints how many of them are palindromes.
 
 Example:
-
 Sample Input: `"danaerys dad cat civic bottle"`
-
 Sample Output: `2`
+
+```swift
+
+let input = "Swift is the best language"
+let words = input.components(separatedBy: " ")
+var output = ""
+
+for word in words.reversed() {
+output += "\(word) "
+}
+print(output)
+
+
+```
 
 
 ## Question 5
